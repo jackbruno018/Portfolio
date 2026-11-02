@@ -166,7 +166,21 @@ dialog p{color:var(--mut);font-size:15px}
 
 <section class="mq" aria-label="Tools and experience">
   <span class="pill lab"><i class="dot"></i>Tools I work with</span>
+  
   <div class="row" aria-hidden="true"><div class="track" data-m="SQL|Excel|Power BI|Tableau|Python|Jira|Figma|Draw.io|Lucidchart|ChatGPT|Claude|Microsoft Copilot|Google Gemini|Notion AI"></div></div>
+  <style>
+    @keyframes tool-spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .mq .row .track {
+        animation: tool-spin 30s linear infinite;
+        transform-origin: center;
+      }
+    }
+  </style>
   <div class="row r2" aria-hidden="true"><div class="track" data-m="Eppinger Tooling Asia|App Innovation|M8 IT Solutions"></div></div>
   <p class="sr" style="position:absolute;left:-9999px">SQL, Excel, Power BI, Tableau, Python, Jira, Figma, Draw.io, Lucidchart and AI assistants. Internships at Eppinger Tooling Asia, App Innovation and M8 IT Solutions.</p>
 </section>
