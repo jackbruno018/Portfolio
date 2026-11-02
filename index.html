@@ -51,9 +51,10 @@ h2{font:300 clamp(28px,4.4vw,48px)/1.12 var(--disp);letter-spacing:-.01em}
 .mq{padding:40px 0 20px;text-align:center}
 .mq .lab{display:inline-block;margin-bottom:22px}
 .row{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);margin:10px 0}
-.track{display:flex;gap:44px;width:max-content;animation:mq 38s linear infinite;font:500 clamp(15px,2vw,20px) var(--disp);color:var(--mut);white-space:nowrap}
+.track{display:flex;width:max-content;animation:marquee-scroll 38s linear infinite;font:500 clamp(15px,2vw,20px) var(--disp);color:var(--mut);white-space:nowrap;will-change:transform}
+.track span{padding-right:44px}
 .row.r2 .track{animation-duration:55s;animation-direction:reverse;font-size:15px;opacity:.7}
-@keyframes mq{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* what i do */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .stack .glass{padding:30px}
@@ -168,7 +169,6 @@ dialog p{color:var(--mut);font-size:15px}
   <span class="pill lab"><i class="dot"></i>Tools I work with</span>
   
   <div class="row" aria-hidden="true"><div class="track" data-m="SQL|Excel|Power BI|Tableau|Python|Jira|Figma|Draw.io|Lucidchart|ChatGPT|Claude|Microsoft Copilot|Google Gemini|Notion AI"></div></div>
-  
   <div class="row r2" aria-hidden="true"><div class="track" data-m="Eppinger Tooling Asia|App Innovation|M8 IT Solutions"></div></div>
   <p class="sr" style="position:absolute;left:-9999px">SQL, Excel, Power BI, Tableau, Python, Jira, Figma, Draw.io, Lucidchart and AI assistants. Internships at Eppinger Tooling Asia, App Innovation and M8 IT Solutions.</p>
 </section>
